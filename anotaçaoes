@@ -1,0 +1,26 @@
+ prestar atençao na hora de criar o template
+ 
+ defaulcontroler
+ base.html
+ index.html.twig
+
+ 
+ gerar bundle 
+ routing.ylm == prefix:   /admin
+ colar na index.twig do bundle
+ 
+ 
+{% extends 'base.html.twig' %}
+ admin
+{% block body %}
+ 
+ 
+ cole e copia o arquivo base.twig no mesmo diretorio base-admin.twig   e mude no arquivo index. do bundle base-admin
+ 
+ 
+ database ---- php bin/console doctrine:database:create
+criar pasta dentro do adminbundle entity --
+___criar arquivo classe  php -> veiculos ----colocar namespace adminbundle/Entity
+
+mapear no doctrine: 
+          olhar no doctrine no site simfony
