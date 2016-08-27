@@ -24,3 +24,11 @@ ___criar arquivo classe  php -> veiculos ----colocar namespace adminbundle/Entit
 
 mapear no doctrine: 
           olhar no doctrine no site simfony
+          
+          namespace AppBundle\Entity;
+
+php bin/console doctrine:generate:entities AppBundle/Entity/Product
+
+
+gerar os crud:::::     
+php bin/console generate:doctrine:crud
