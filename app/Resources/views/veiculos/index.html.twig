@@ -1,9 +1,9 @@
-{% extends 'base.html.twig' %}
+{% extends 'base-admin.html.twig' %}
 
 {% block body %}
     <h1>Veiculos list</h1>
 
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Id</th>
@@ -25,14 +25,9 @@
                 <td>{{ veiculo.cor }}</td>
                 <td>{{ veiculo.categoria }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('veiculos_show', { 'id': veiculo.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('veiculos_edit', { 'id': veiculo.id }) }}">edit</a>
-                        </li>
-                    </ul>
+                    
+                    <a href="{{ path('veiculos_edit', { 'id': veiculo.id }) }}">Editar<span class="glyphicon glyphicon-pencil"></span></a>
+                    
                 </td>
             </tr>
         {% endfor %}

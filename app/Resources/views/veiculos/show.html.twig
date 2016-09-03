@@ -1,9 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends 'base-admin.html.twig' %}
+
+
 
 {% block body %}
     <h1>Veiculos</h1>
 
-    <table>
+    <table class="table table-hover"  >
         <tbody>
             <tr>
                 <th>Id</th>
@@ -34,7 +36,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('veiculos_index') }}">Back to the list</a>
+            <a href="{{ path('veiculos_index') }}">Veiculos</a>
         </li>
         <li>
             <a href="{{ path('veiculos_edit', { 'id': veiculo.id }) }}">Edit</a>

@@ -17,7 +17,7 @@ class VeiculosType extends AbstractType
         $builder
             ->add('marca')
             ->add('modelo')
-            ->add('ano', 'date')
+            ->add('ano')
             ->add('cor')
             ->add('categoria')
         ;
