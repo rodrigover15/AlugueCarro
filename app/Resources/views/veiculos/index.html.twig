@@ -1,7 +1,7 @@
 {% extends 'base-admin.html.twig' %}
 
 {% block body %}
-    <h1>Veiculos list</h1>
+    <h1>Veiculos</h1>
 
     <table class="table table-striped">
         <thead>
@@ -15,12 +15,9 @@
                 <th>Actions</th>
             </tr>
         </thead>
-        
         <tbody>
         {% for veiculo in veiculos %}
-             
             <tr>
-                <a href="{{ path('veiculos_new') }}">Cadastrar<span class="glyphicon glyphicon-plus"></span></a>
                 <td><a href="{{ path('veiculos_show', { 'id': veiculo.id }) }}">{{ veiculo.id }}</a></td>
                 <td>{{ veiculo.marca }}</td>
                 <td>{{ veiculo.modelo }}</td>
@@ -35,5 +32,11 @@
             </tr>
         {% endfor %}
         </tbody>
-   
+    </table>
+
+    <ul>
+        <li>
+ <a href="{{ path('veiculos_new') }}">Cadastro Veiculos</a>
+        </li>
+    </ul>
 {% endblock %}
