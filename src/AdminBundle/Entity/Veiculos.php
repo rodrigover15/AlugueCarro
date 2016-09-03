@@ -3,6 +3,8 @@
 
 namespace AdminBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  *@ORM\Entity
  * @ORM\Table(name="Veiculos")
@@ -18,9 +20,15 @@ class Veiculos
      * @ORM\Column(type="string", length=100)
      */
    private $marca;
+   
    /**
+      * @Assert\NotBlank()
+     * @Assert\Length(min=3)
+     * minMessage('palavra muito pequena')
      * @ORM\Column(type="string", length=100)
+     * 
      */
+   
    private $modelo;
      /**
      * @ORM\Column(type="date")

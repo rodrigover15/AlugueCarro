@@ -62,3 +62,10 @@ Admin:veiculos:index.html.twig
       @JoinColumn(name="address_id", referencedColumnName="id")
       
      adicionar no aruivo veiculo controler-> add ('cidade')
+     
+     
+     validate*************
+     /**
+    c * @Assert\NotBlank()
+     * @Assert\Length(min=3)
+     */
