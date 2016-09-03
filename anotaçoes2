@@ -1,0 +1,18 @@
+ composer create-project symfony/framework-standard-edition AlugueCarro
+php bin/console doctrine:generate:entities AdminBundle\Entity
+php bin/console doctrine:generate:entities AdminBundle/Entity/Veiculos
+
+php bin/console doctrine:schema:create
+
+ php bin\console doctrine:generate:entities AdminBundle\Entity\Veiculos
+ php bin\console doctrine:generate:crud
+php bin/console doctrine:schema:update --force
+
+
+procurar  http://localhost:8000/admin/veiculos/
+
+{% form_theme form 'bootstrap_3_layout.html.twig' %}  coloar no arquivo new
+
+mudar do render do edit,show...
+Admin:veiculos:index.html.twig
+
