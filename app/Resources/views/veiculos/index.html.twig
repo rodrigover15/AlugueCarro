@@ -3,7 +3,7 @@
 {% block body %}
     <h1>Veiculos</h1>
 
-    <table class="table table-striped">
+    <table class="table table-hover table-responsive">
         <thead>
             <tr>
                 <th>Id</th>
@@ -12,7 +12,8 @@
                 <th>Ano</th>
                 <th>Cor</th>
                 <th>Categoria</th>
-                <th>Actions</th>
+                <th>Cidade</th>
+                <th>Açoes</th>
             </tr>
         </thead>
         <tbody>
@@ -21,9 +22,10 @@
                 <td><a href="{{ path('veiculos_show', { 'id': veiculo.id }) }}">{{ veiculo.id }}</a></td>
                 <td>{{ veiculo.marca }}</td>
                 <td>{{ veiculo.modelo }}</td>
-                <td>{% if veiculo.ano %}{{ veiculo.ano|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if veiculo.ano %}{{ veiculo.ano|date('d/m/Y') }}{% endif %}</td>
                 <td>{{ veiculo.cor }}</td>
                 <td>{{ veiculo.categoria }}</td>
+                    <td>{{ veiculo.cidade }}</td>
                 <td>
                     
                     <a href="{{ path('veiculos_edit', { 'id': veiculo.id }) }}">Editar<span class="glyphicon glyphicon-pencil"></span></a>
@@ -36,7 +38,7 @@
 
     <ul>
         <li>
- <a href="{{ path('veiculos_new') }}">Cadastro Veiculos</a>
+            <a href="{{ path('veiculos_new') }}">Cadastro Veiculos</a>
         </li>
     </ul>
 {% endblock %}

@@ -7,12 +7,58 @@ php bin/console doctrine:schema:create
  php bin\console doctrine:generate:entities AdminBundle\Entity\Veiculos
  php bin\console doctrine:generate:crud
 php bin/console doctrine:schema:update --force
+ php bin/console doctrine:schema:update
+
 
 
 procurar  http://localhost:8000/admin/veiculos/
 
+ir no arquivo config.yml-:
+
+
+    form_themes:
+        - 'bootstrap_3_layout.html.twig'
+    
+
 {% form_theme form 'bootstrap_3_layout.html.twig' %}  coloar no arquivo new
 
-mudar do render do edit,show...
-Admin:veiculos:index.html.twig
+mudar a pasta veiculos de app para adminbundle
+mudar do render do edit,show... no veiculo controler
 
+Admin:veiculos:index.html.twig
+ 
+ 
+ ->add('marca', texttype)
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ associaçao ->>>ler manual doctrine association
+ **
+     * @ORM\OneToOne(targetEntity="Invitation")
+     * @ORM\JoinColumn(referencedColumnName="code")
+     * @Assert\NotNull(message="Your invitation is wrong", groups={"Registration"})
+     */
+     
+     olhar no arvquivo Veiculo.php ->>>>colocar private $cidade
+     ***********
+     
+     regerar as entidades
+      @JoinColumn(name="address_id", referencedColumnName="id")
+      
+     adicionar no aruivo veiculo controler-> add ('cidade')

@@ -93,28 +93,4 @@ class Veiculos
 
    
    
-
-    /**
-     * Set cidade
-     *
-     * @param \AdminBundle\Entity\Cidades $cidade
-     *
-     * @return Veiculos
-     */
-    public function setCidade(\AdminBundle\Entity\Cidades $cidade = null)
-    {
-        $this->cidade = $cidade;
-
-        return $this;
-    }
-
-    /**
-     * Get cidade
-     *
-     * @return \AdminBundle\Entity\Cidades
-     */
-    public function getCidade()
-    {
-        return $this->cidade;
-    }
 }
