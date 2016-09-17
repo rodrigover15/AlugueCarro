@@ -23,7 +23,7 @@ class Cidades
     private $estado;
     
     public function __toString() {
-       return $this->nome ;
+       return $this->nome.'-'.$this->estado ;
     }
     
     

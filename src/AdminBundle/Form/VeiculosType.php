@@ -20,17 +20,25 @@ class VeiculosType extends AbstractType
         $builder
             ->add('marca', ChoiceType::class, array(
                'choices'     => array(
-                   'Renault' => 'Renaul',
+                   'Renault' => 'Renault',
                    'Ford'    => 'Ford',
                    'VW'      => 'VW',
                ),
             ))
             ->add('ano',  DateType::class, array(
-                'format'=> 'yyyy-MM-dd'
+                'format'=> 'ddMM-yyyy'
                 ))
 
             ->add('modelo')
-            ->add('cor')
+            ->add('cor',  ChoiceType::class,array(
+                'choices'   =>array(
+                      'Azul' => 'Azul',
+                      'Verde'    => 'Verde',
+                     'Vermelho'      => 'Vermelho',
+                ),
+                 'expanded' => true,
+                'multiple' => false
+            ))
             ->add('categoria')
              ->add('cidade')
         ;

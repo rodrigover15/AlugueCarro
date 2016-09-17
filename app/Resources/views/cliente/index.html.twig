@@ -1,0 +1,41 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block body %}
+    <h1>Cliente list</h1>
+
+      <table class="table table-hover table-responsive">
+        <thead>
+            <tr>
+                <th>Cpf</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cliente in clientes %}
+            <tr>
+                <td><a href="{{ path('cliente_show', { 'cpf': cliente.cpf }) }}">{{ cliente.cpf }}</a></td>
+                <td>{{ cliente.nome }}</td>
+                <td>{{ cliente.telefone }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('cliente_show', { 'cpf': cliente.cpf }) }}">Mostrar</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('cliente_edit', { 'id': cliente.cpf }) }}">Editar</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cliente_new') }}">Cadastrar</a>
+        </li>
+    </ul>
+{% endblock %}

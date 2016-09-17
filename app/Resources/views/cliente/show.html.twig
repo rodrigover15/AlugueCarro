@@ -1,0 +1,32 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block body %}
+    <h1>Cliente</h1>
+
+    <table class="table table-hover"  >
+        <tbody>
+            <tr>
+                <th>Cpf</th>
+                <td>{{ cliente.cpf }}</td>
+            </tr>
+            <tr>
+                <th>Nome</th>
+                <td>{{ cliente.nome }}</td>
+            </tr>
+            <tr>
+                <th>Telefone</th>
+                <td>{{ cliente.telefone }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cliente_index') }}">Lista de Clientes</a>
+        </li>
+        <li>
+            <a href="{{ path('cliente_edit', { 'id': cliente.cpf }) }}">Editar</a>
+        </li>
+     
+    </ul>
+{% endblock %}

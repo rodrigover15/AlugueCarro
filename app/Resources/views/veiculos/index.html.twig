@@ -17,28 +17,25 @@
             </tr>
         </thead>
         <tbody>
-        {% for veiculo in veiculos %}
-            <tr>
-                <td><a href="{{ path('veiculos_show', { 'id': veiculo.id }) }}">{{ veiculo.id }}</a></td>
-                <td>{{ veiculo.marca }}</td>
-                <td>{{ veiculo.modelo }}</td>
-                <td>{% if veiculo.ano %}{{ veiculo.ano|date('d/m/Y') }}{% endif %}</td>
-                <td>{{ veiculo.cor }}</td>
-                <td>{{ veiculo.categoria }}</td>
+            {% for veiculo in veiculos %}
+                <tr>
+                    <td><a href="{{ path('veiculos_show', { 'id': veiculo.id }) }}">{{ veiculo.id }}</a></td>
+                    <td>{{ veiculo.marca }}</td>
+                    <td>{{ veiculo.modelo }}</td>
+                    <td>{% if veiculo.ano %}{{ veiculo.ano|date('d/m/Y') }}{% endif %}</td>
+                    <td>{{ veiculo.cor }}</td>
+                    <td>{{ veiculo.categoria }}</td>
                     <td>{{ veiculo.cidade }}</td>
-                <td>
-                    
-                    <a href="{{ path('veiculos_edit', { 'id': veiculo.id }) }}">Editar<span class="glyphicon glyphicon-pencil"></span></a>
-                    
-                </td>
-            </tr>
-        {% endfor %}
+                    <td>
+
+                        <a href="{{ path('veiculos_edit', { 'id': veiculo.id }) }}">Editar<span class="glyphicon glyphicon-pencil"></span></a>
+             
+                    </td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('veiculos_new') }}">Cadastro Veiculos</a>
-        </li>
-    </ul>
+
+
 {% endblock %}
